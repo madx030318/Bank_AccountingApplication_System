@@ -116,10 +116,16 @@ public:
     }
 };
 
+void RequestClientInformation(IdentificationSystem& Client) {
 
-// --------------------------------------------------
-// MAIN
-// --------------------------------------------------
+    cout << "Account number address: " << &Client.AccountNumber << endl;
+    cout << "Client name address: " << &Client.ClientName << endl;
+    cout << "Balance address: " << &Client.Balance << endl;
+    cout << "Deposit balance address: " << &Client.Deposit_Balance << endl;
+}
+
+
+
 
 int main()
 {
@@ -183,13 +189,15 @@ int main()
         "Put on deposit",
         "Transfer money to account",
         "Display Your Accounts",
-        "Terminate Account"
+        "Terminate Account",
+        "Your Info"
     };
 
 
     int ClientChoice;
     int Amount;
     int Deposit_Amount;
+    int ClientInfo;
 
 
     // --------------------------------------------------
@@ -199,7 +207,7 @@ int main()
     cout << "Please choose a service:" << endl;
 
 
-    for (int k = 0; k < 6; k++)
+    for (int k = 0; k < 7; k++)
     {
         cout << k + 1 << ". "
              << Services[k]
@@ -221,7 +229,7 @@ int main()
 while (true) {
 
 
-    if (ClientChoice >= 1 && ClientChoice <= 6)
+    if (ClientChoice >= 1 && ClientChoice <= 7)
     {
         cout << "Selected service: "
              << Services[ClientChoice - 1]
@@ -230,7 +238,7 @@ while (true) {
     else
     {
         cout << "The service is invalid. "
-             << "Please choose 1 - 6."
+             << "Please choose 1 - 7."
              << endl;
 
         return 0;
@@ -323,6 +331,7 @@ while (true) {
 
         cout << "Displaying your accounts..."
              << endl;
+        
 
 
         for (int i = 0; i < Testing.size(); i++)
@@ -346,6 +355,8 @@ while (true) {
         }
 
         break;
+
+        
 
 
   
@@ -371,6 +382,11 @@ while (true) {
                  << endl;
         }
 
+        break;
+
+    case 7:
+        cout << "______Your_Info_____";
+        RequestClientInformation(*CurrentAccount);
         break;
 
 
