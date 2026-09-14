@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
 using namespace std;
 
 // Client address request according to the bank
@@ -60,6 +59,9 @@ public:
     string AccountOperations;
     string MainMenu;
     bool AccountStatus;
+    string Password;
+    bool bHasPassword;
+    bool bIsBlocked;
 
 
     // Assignment operator
@@ -72,6 +74,9 @@ public:
         AccountOperations = Other.AccountOperations;
         MainMenu = Other.MainMenu;
         AccountStatus = Other.AccountStatus;
+        Password = Other.Password;
+        bHasPassword = Other.bHasPassword;
+        bIsBlocked = Other.bIsBlocked;
 
         return *this;
     }
@@ -116,6 +121,20 @@ public:
     }
 };
 
+bool ClientEnterPassword(IdentificationSystem& Account)
+{
+    string PasswordInput;
+
+    cout << "Please enter your password: ";
+    cin >> PasswordInput;
+
+    if (PasswordInput == Account.Password)
+    {
+        return true;
+    }
+
+    return false;
+}
 
 // --------------------------------------------------
 // MAIN
@@ -139,14 +158,15 @@ int main()
     Client1.AccountStatus = true;
     Client1.Balance = 5000;
     Client1.Deposit_Balance = 0;
+    Client1.Password = "Tyler1991**";
+    Client1.bHasPassword = true;
+    Client1.bIsBlocked = false;
 
 
     Testing.push_back(Client1);
 
 
-    // --------------------------------------------------
-    // FIND ACCOUNT
-    // --------------------------------------------------
+
 
     IdentificationSystem* CurrentAccount = NULL;
 
@@ -171,10 +191,19 @@ int main()
         return 0;
     }
 
+    // After the implenmentation of oop the system must identify the user via password authentification
 
-    // --------------------------------------------------
-    // SERVICES
-    // --------------------------------------------------
+    id (CurrentAccount->bHasPassword)
+        {
+        if (!ClientEnterPassword(*CurrentAccount))
+        {
+            cout << "Incorrect Password. You are blocked by system. " << endl;
+            return 0;
+        }
+    }
+
+
+    // Implementation of menu services section
 
     string Services[6] =
     {
@@ -192,9 +221,16 @@ int main()
     int Deposit_Amount;
 
 
-    // --------------------------------------------------
-    // DISPLAY SERVICES
-    // --------------------------------------------------
+
+    
+
+
+
+    
+
+
+   // Interface of services are desiplayed for client of application 
+    // After entering the correct password
 
     cout << "Please choose a service:" << endl;
 
