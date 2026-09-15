@@ -62,6 +62,7 @@ public:
     string Password;
     bool bHasPassword;
     bool bIsBlocked;
+    string QRSymbols;
 
 
     // Assignment operator
@@ -77,6 +78,7 @@ public:
         Password = Other.Password;
         bHasPassword = Other.bHasPassword;
         bIsBlocked = Other.bIsBlocked;
+        QRSymbols = Other.QrSymbols;
 
         return *this;
     }
@@ -136,6 +138,13 @@ bool ClientEnterPassword(IdentificationSystem& Account)
     return false;
 }
 
+void GenerateQRCode() 
+{
+    long long code = 4448889993211LL;
+
+    return to_string(code);
+}
+
 // --------------------------------------------------
 // MAIN
 // --------------------------------------------------
@@ -161,6 +170,8 @@ int main()
     Client1.Password = "Tyler1991**";
     Client1.bHasPassword = true;
     Client1.bIsBlocked = false;
+    long long code = 4455331224LL;
+    Client1.QRSymbols = to_string(code);
 
 
     Testing.push_back(Client1);
@@ -205,14 +216,15 @@ int main()
 
     // Implementation of menu services section
 
-    string Services[6] =
+    string Services[7] =
     {
         "Add in",
         "Money out",
         "Put on deposit",
         "Transfer money to account",
         "Display Your Accounts",
-        "Terminate Account"
+        "Terminate Account",
+        "QR Code Generation"
     };
 
 
@@ -235,7 +247,7 @@ int main()
     cout << "Please choose a service:" << endl;
 
 
-    for (int k = 0; k < 6; k++)
+    for (int k = 0; k < 7; k++)
     {
         cout << k + 1 << ". "
              << Services[k]
@@ -243,21 +255,17 @@ int main()
     }
 
 
-    // --------------------------------------------------
-    // GET USER CHOICE
-    // --------------------------------------------------
+    // Client inputs his choice
 
     cin >> ClientChoice;
 
 
-    // --------------------------------------------------
-    // CHECK CHOICE
-    // --------------------------------------------------
+    // Check choice system implementatiob
     
 while (true) {
 
 
-    if (ClientChoice >= 1 && ClientChoice <= 6)
+    if (ClientChoice >= 1 && ClientChoice <= 7)
     {
         cout << "Selected service: "
              << Services[ClientChoice - 1]
@@ -266,7 +274,7 @@ while (true) {
     else
     {
         cout << "The service is invalid. "
-             << "Please choose 1 - 6."
+             << "Please choose 1 - 7."
              << endl;
 
         return 0;
@@ -408,6 +416,15 @@ while (true) {
         }
 
         break;
+
+
+    case 7:
+        CurrentAccount->QRSymbols = GenerateQRCode();
+        cout << "Please view your QR Code" << CurrentAccount->QRSymbols << endl;
+
+        break;
+
+        
 
 
     default:
