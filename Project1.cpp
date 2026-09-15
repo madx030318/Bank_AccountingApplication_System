@@ -63,6 +63,9 @@ public:
     bool bHasPassword;
     bool bIsBlocked;
     string QRSymbols;
+    int SocialAccount;
+    string SocialUserName;
+    int SocialBalance;
 
 
     // Assignment operator
@@ -79,6 +82,9 @@ public:
         bHasPassword = Other.bHasPassword;
         bIsBlocked = Other.bIsBlocked;
         QRSymbols = Other.QrSymbols;
+        SocialAccount = Other.SocialAccount;
+        SocialUserName = Other.SocialUserName;
+        SocialBalance = Other.SocialBalance;
 
         return *this;
     }
@@ -121,6 +127,23 @@ public:
     {
         return AccountStatus;
     }
+
+
+    int GetSocialAccount()
+{
+    cout << "Here is your Social Account ---> " << SocialAccount << endl;
+    return SocialAccount;
+
+}
+
+   string GetSocialName()
+{
+    cout << "The name of actual pocessed account ---- "  > SocialUserName << endl;
+    return SocialUserName;
+
+}
+
+
 };
 
 bool ClientEnterPassword(IdentificationSystem& Account)
@@ -172,6 +195,8 @@ int main()
     Client1.bIsBlocked = false;
     long long code = 4455331224LL;
     Client1.QRSymbols = to_string(code);
+    Client1.SocialAccount = 8000;
+    Client1.SocialUserName = &Client1.ClientName;
 
 
     Testing.push_back(Client1);
@@ -202,6 +227,21 @@ int main()
         return 0;
     }
 
+    for (int k = 0; k < Testing.size(); k++) {
+        IdentificationSystem& Account = Testing[k];
+        if (Account.GetSocialAccount() == 8000) {
+            CurrentAccount = &Account;
+            break;
+            
+    }
+    }
+
+    if (CurrentAccount == NULL) 
+    {
+        cout << "There is no such social account. " << endl;
+        return 0;
+    }
+
     // After the implenmentation of oop the system must identify the user via password authentification
 
     id (CurrentAccount->bHasPassword)
@@ -216,7 +256,7 @@ int main()
 
     // Implementation of menu services section
 
-    string Services[7] =
+    string Services[8] =
     {
         "Add in",
         "Money out",
@@ -224,13 +264,16 @@ int main()
         "Transfer money to account",
         "Display Your Accounts",
         "Terminate Account",
-        "QR Code Generation"
+        "QR Code Generation",
+        "Social Account Personal"
     };
 
 
     int ClientChoice;
     int Amount;
     int Deposit_Amount;
+    int Social_Amount;
+    
 
 
 
@@ -247,7 +290,7 @@ int main()
     cout << "Please choose a service:" << endl;
 
 
-    for (int k = 0; k < 7; k++)
+    for (int k = 0; k < 8; k++)
     {
         cout << k + 1 << ". "
              << Services[k]
@@ -423,6 +466,12 @@ while (true) {
         cout << "Please view your QR Code" << CurrentAccount->QRSymbols << endl;
 
         break;
+
+
+    case 8:
+        CurrentAccount->SocialAccount = GetSocialAccount();
+        cout << "The SocialAccountInfo << Account.SocialBalance << endl;
+        
 
         
 
