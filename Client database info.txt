@@ -1,0 +1,122 @@
+//Client database info
+
+AccountNumber: 1003
+ClientName: Tyler
+Password: 1234
+AccountStatus: Active
+Balance: 5000
+DepositBalance: 0
+QRSymbols: 4448889993211
+SocialAccount: Yes
+SocialUsername: TylerBank
+----------------------------------------
+
+AccountNumber: 1004
+ClientName: Sarah
+Password: 5678
+AccountStatus: Active
+Balance: 12500
+DepositBalance: 3000
+QRSymbols: 555777222111
+SocialAccount: No
+SocialUsername: None
+----------------------------------------
+
+AccountNumber: 1005
+ClientName: Michael
+Password: 2468
+AccountStatus: Active
+Balance: 8700
+DepositBalance: 1500
+QRSymbols: 777444111222
+SocialAccount: Yes
+SocialUsername: MichaelBank
+----------------------------------------
+
+AccountNumber: 1006
+ClientName: Emma
+Password: 1357
+AccountStatus: Terminated
+Balance: 2500
+DepositBalance: 0
+QRSymbols: 888333666999
+SocialAccount: No
+SocialUsername: None
+----------------------------------------
+
+AccountNumber: 1007
+ClientName: Daniel
+Password: 9090
+AccountStatus: Active
+Balance: 21000
+DepositBalance: 5000
+QRSymbols: 999111333777
+SocialAccount: Yes
+SocialUsername: DanielFinance
+----------------------------------------
+
+AccountNumber: 1015
+ClientName: Lucas
+Password: 9999
+AccountStatus: Active
+Balance: 7600
+DepositBalance: 1800
+QRSymbols: 112233445566
+SocialAccount: Yes
+SocialUsername: LucasFinance
+----------------------------------------
+
+AccountNumber: 1016
+ClientName: Charlotte
+Password: 1212
+AccountStatus: Active
+Balance: 18900
+DepositBalance: 6000
+QRSymbols: 223344556677
+SocialAccount: Yes
+SocialUsername: CharlotteBank
+----------------------------------------
+
+AccountNumber: 1017
+ClientName: Henry
+Password: 3434
+AccountStatus: Active
+Balance: 5600
+DepositBalance: 700
+QRSymbols: 334455667788
+SocialAccount: No
+SocialUsername: None
+----------------------------------------
+
+AccountNumber: 1018
+ClientName: Amelia
+Password: 5656
+AccountStatus: Active
+Balance: 27000
+DepositBalance: 8000
+QRSymbols: 445566778899
+SocialAccount: Yes
+SocialUsername: AmeliaFinance
+----------------------------------------
+
+AccountNumber: 1019
+ClientName: Sebastian
+Password: 7878
+AccountStatus: Terminated
+Balance: 4100
+DepositBalance: 0
+QRSymbols: 556677889900
+SocialAccount: No
+SocialUsername: None
+----------------------------------------
+
+AccountNumber: 1020
+ClientName: Evelyn
+Password: 9091
+AccountStatus: Active
+Balance: 14300
+DepositBalance: 3500
+QRSymbols: 667788990011
+SocialAccount: Yes
+SocialUsername: EvelynBank
+----------------------------------------
