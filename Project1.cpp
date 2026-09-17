@@ -4,50 +4,6 @@
 #include <string>
 using namespace std;
 
-// Client address request according to the bank
-// There are four clients for testing phase 
-
-int ClientOneAddress(int y)
-{
-    cout << "Address of #1 to " << &y << endl;
-    return y;
-}
-
-
-int ClientTwoAddress(int z)
-{
-    cout << "Address of #2 to " << &z << endl;
-    z = 3;
-    return z;
-}
-
-
-int ClientThreeAddress(int* x)
-{
-    *x = 8;
-    return *x;
-}
-
-
-double ClientFourAddress(double& j)
-{
-    cout << "The Address of #3 is " << &j << endl;
-    j = 9;
-    return j;
-}
-
-
-void ClientFiveAddress(const vector<int>& numbers)
-{
-    for (int i = 0; i < numbers.size(); i++)
-    {
-        cout << numbers[i] << ", ";
-    }
-
-    cout << endl;
-}
-
-
 class IdentificationSystem
 {
 public:
