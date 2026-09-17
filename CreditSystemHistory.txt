@@ -1,0 +1,419 @@
+========================================
+CLIENT 1
+========================================
+AccountNumber: 1001
+ClientName: Tyler
+Password: 1234
+AccountStatus: Active
+Balance: 5000
+DepositBalance: 0
+QRSymbols: 4448889993211
+SocialAccount: Yes
+SocialUsername: TylerBank
+
+CreditApplication: Yes
+CreditSum: 500000
+CreditPercentOfYear: 15
+CreditApplicationDate: 2026-09-01
+CreditDurationMonths: 12
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 2
+========================================
+AccountNumber: 1002
+ClientName: Michael
+Password: 2456
+AccountStatus: Active
+Balance: 12500
+DepositBalance: 50000
+QRSymbols: 4448889993212
+SocialAccount: Yes
+SocialUsername: MichaelBank
+
+CreditApplication: Yes
+CreditSum: 1000000
+CreditPercentOfYear: 14
+CreditApplicationDate: 2026-09-02
+CreditDurationMonths: 24
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 3
+========================================
+AccountNumber: 1003
+ClientName: David
+Password: 3789
+AccountStatus: Active
+Balance: 7500
+DepositBalance: 10000
+QRSymbols: 4448889993213
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 500000
+CreditPercentOfYear: 15
+CreditApplicationDate: 2026-09-03
+CreditDurationMonths: 12
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 4
+========================================
+AccountNumber: 1004
+ClientName: James
+Password: 4521
+AccountStatus: Active
+Balance: 300
+DepositBalance: 0
+QRSymbols: 4448889993214
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 500000
+CreditPercentOfYear: 18
+CreditApplicationDate: 2026-09-04
+CreditDurationMonths: 12
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 5
+========================================
+AccountNumber: 1005
+ClientName: Robert
+Password: 5612
+AccountStatus: Active
+Balance: 25000
+DepositBalance: 75000
+QRSymbols: 4448889993215
+SocialAccount: Yes
+SocialUsername: RobertBank
+
+CreditApplication: No
+CreditSum: 0
+CreditPercentOfYear: 0
+CreditApplicationDate: None
+CreditDurationMonths: 0
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 6
+========================================
+AccountNumber: 1006
+ClientName: Daniel
+Password: 6743
+AccountStatus: Active
+Balance: 15000
+DepositBalance: 25000
+QRSymbols: 4448889993216
+SocialAccount: Yes
+SocialUsername: DanielBank
+
+CreditApplication: Yes
+CreditSum: 750000
+CreditPercentOfYear: 13
+CreditApplicationDate: 2026-09-05
+CreditDurationMonths: 36
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 7
+========================================
+AccountNumber: 1007
+ClientName: William
+Password: 7890
+AccountStatus: Active
+Balance: 1000
+DepositBalance: 0
+QRSymbols: 4448889993217
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 2000000
+CreditPercentOfYear: 20
+CreditApplicationDate: 2026-09-05
+CreditDurationMonths: 60
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 8
+========================================
+AccountNumber: 1008
+ClientName: Thomas
+Password: 8123
+AccountStatus: Active
+Balance: 32000
+DepositBalance: 100000
+QRSymbols: 4448889993218
+SocialAccount: Yes
+SocialUsername: ThomasBank
+
+CreditApplication: Yes
+CreditSum: 1500000
+CreditPercentOfYear: 12
+CreditApplicationDate: 2026-09-06
+CreditDurationMonths: 36
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 9
+========================================
+AccountNumber: 1009
+ClientName: Christopher
+Password: 9234
+AccountStatus: Active
+Balance: 4500
+DepositBalance: 5000
+QRSymbols: 4448889993219
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 300000
+CreditPercentOfYear: 16
+CreditApplicationDate: 2026-09-06
+CreditDurationMonths: 12
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 10
+========================================
+AccountNumber: 1010
+ClientName: Joseph
+Password: 1357
+AccountStatus: Active
+Balance: 250
+DepositBalance: 0
+QRSymbols: 4448889993220
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 800000
+CreditPercentOfYear: 19
+CreditApplicationDate: 2026-09-07
+CreditDurationMonths: 24
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 11
+========================================
+AccountNumber: 1011
+ClientName: Charles
+Password: 2468
+AccountStatus: Active
+Balance: 18000
+DepositBalance: 30000
+QRSymbols: 4448889993221
+SocialAccount: Yes
+SocialUsername: CharlesBank
+
+CreditApplication: Yes
+CreditSum: 600000
+CreditPercentOfYear: 14
+CreditApplicationDate: 2026-09-08
+CreditDurationMonths: 24
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 12
+========================================
+AccountNumber: 1012
+ClientName: Christopher
+Password: 3579
+AccountStatus: Active
+Balance: 9000
+DepositBalance: 15000
+QRSymbols: 4448889993222
+SocialAccount: Yes
+SocialUsername: ChrisBank
+
+CreditApplication: No
+CreditSum: 0
+CreditPercentOfYear: 0
+CreditApplicationDate: None
+CreditDurationMonths: 0
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 13
+========================================
+AccountNumber: 1013
+ClientName: Matthew
+Password: 4680
+AccountStatus: Active
+Balance: 50000
+DepositBalance: 150000
+QRSymbols: 4448889993223
+SocialAccount: Yes
+SocialUsername: MatthewBank
+
+CreditApplication: Yes
+CreditSum: 3000000
+CreditPercentOfYear: 11
+CreditApplicationDate: 2026-09-09
+CreditDurationMonths: 60
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 14
+========================================
+AccountNumber: 1014
+ClientName: Anthony
+Password: 5791
+AccountStatus: Active
+Balance: 700
+DepositBalance: 0
+QRSymbols: 4448889993224
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 1000000
+CreditPercentOfYear: 22
+CreditApplicationDate: 2026-09-09
+CreditDurationMonths: 36
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 15
+========================================
+AccountNumber: 1015
+ClientName: Donald
+Password: 6802
+AccountStatus: Active
+Balance: 22000
+DepositBalance: 40000
+QRSymbols: 4448889993225
+SocialAccount: Yes
+SocialUsername: DonaldBank
+
+CreditApplication: Yes
+CreditSum: 900000
+CreditPercentOfYear: 15
+CreditApplicationDate: 2026-09-10
+CreditDurationMonths: 24
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 16
+========================================
+AccountNumber: 1016
+ClientName: Steven
+Password: 7913
+AccountStatus: Active
+Balance: 3500
+DepositBalance: 2000
+QRSymbols: 4448889993226
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 400000
+CreditPercentOfYear: 17
+CreditApplicationDate: 2026-09-10
+CreditDurationMonths: 12
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 17
+========================================
+AccountNumber: 1017
+ClientName: Andrew
+Password: 8024
+AccountStatus: Active
+Balance: 14000
+DepositBalance: 20000
+QRSymbols: 4448889993227
+SocialAccount: Yes
+SocialUsername: AndrewBank
+
+CreditApplication: Yes
+CreditSum: 700000
+CreditPercentOfYear: 13
+CreditApplicationDate: 2026-09-11
+CreditDurationMonths: 24
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 18
+========================================
+AccountNumber: 1018
+ClientName: Joshua
+Password: 9135
+AccountStatus: Active
+Balance: 6000
+DepositBalance: 5000
+QRSymbols: 4448889993228
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: No
+CreditSum: 0
+CreditPercentOfYear: 0
+CreditApplicationDate: None
+CreditDurationMonths: 0
+CreditApproved: No
+----------------------------------------
+
+========================================
+CLIENT 19
+========================================
+AccountNumber: 1019
+ClientName: Kevin
+Password: 1246
+AccountStatus: Active
+Balance: 28000
+DepositBalance: 60000
+QRSymbols: 4448889993229
+SocialAccount: Yes
+SocialUsername: KevinBank
+
+CreditApplication: Yes
+CreditSum: 1200000
+CreditPercentOfYear: 14
+CreditApplicationDate: 2026-09-12
+CreditDurationMonths: 36
+CreditApproved: Yes
+----------------------------------------
+
+========================================
+CLIENT 20
+========================================
+AccountNumber: 1020
+ClientName: Brian
+Password: 2357
+AccountStatus: Active
+Balance: 150
+DepositBalance: 0
+QRSymbols: 4448889993230
+SocialAccount: No
+SocialUsername: None
+
+CreditApplication: Yes
+CreditSum: 2500000
+CreditPercentOfYear: 21
+CreditApplicationDate: 2026-09-12
+CreditDurationMonths: 60
+CreditApproved: No
+----------------------------------------
