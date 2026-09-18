@@ -54,4 +54,43 @@ bool CreditSystem::CanBeApproved()
     return false;
 }
 
+void AnalyzeEndingDate() {
+  int Year;
+  int Month;
+  int Day;
+
+  char Separator;
+
+  stringstream Date(ApplicationDate);
+
+  Date >> Year >> Separator >> Month >> Separator >> Day;
+
+  Month += DurationMonths;
+
+  while (Month > 12)
+    {
+        Month -= 12;
+        Year++;
+    }
+
+  stringstream Result;
+
+  Result << Year << "-";
+
+  if (Month < 10) {
+    Result << "0";
+  }
+
+  if (Day < 10) {
+    Result << "0";
+  }
+
+  Result << Day;
+
+  EndingDate = Result.str();
+
+  
+
+}
+
 
