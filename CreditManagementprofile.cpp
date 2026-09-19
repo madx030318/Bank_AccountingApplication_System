@@ -20,7 +20,7 @@ CreditSystem::CreditSystem() {  // - The default parameters for system , will be
   
 }
 
-CreditSystem::CreditSystem(int CreditSystem& Parama) {
+CreditSystem::CreditSystem(int CreditSystem& Parama) { 
     AccountNumber = Parama.AccountNumber,
     Sum = Parama.Sum,
     PercentOfYear = Parama.PercentOfYear,
@@ -92,5 +92,47 @@ void AnalyzeEndingDate() {
   
 
 }
+
+void CreditSystem::DisplayCreditInformation() {
+  cout << " CLIENT INFORMATION SYSTEM " << endl;
+  cout << "Account Number: " << AccountNumber << endl;
+  cout << "Application: " << (Application ? "Yes" : "No") << endl;
+  cout << "Credit Sum: " << Sum << endl;
+  cout << "Percent Of Year: " << PercentOfYear << "%" << endl;
+  cout << "Application Date: " << ApplicationDate << endl;
+  cout << "Duration: " << DurationMonths << " months" << endl;
+  cout << "Ending Date: " << EndingDate << endl;
+  cout << "Approved: " << (Approved ? "Yes" : "No") << endl;
+
+}
+
+int CreditSystem::FindClient()
+{
+  
+
+  ifstream Database("ClientDatabase.txt");
+  if (!Database.is_open())
+    {
+        cout << "Database could not be opened." << endl;
+        return -1;
+    }
+
+  string Line;
+
+    while (getline(Database, Line))
+    {
+        cout << Line << endl;
+    }
+
+    Database.close();
+
+    return AccountNumber;
+}
+
+
+
+}
+
+
 
 
