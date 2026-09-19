@@ -1,0 +1,126 @@
+BANKING NOTIFICATION TEMPLATES
+
+These messages are templates. Replace placeholders with values
+from the current account through pointers/references.
+
+Available placeholders:
+{AccountNumber}
+{ClientName}
+{Amount}
+{Balance}
+{DepositAmount}
+{CreditSum}
+{InterestRate}
+{DurationMonths}
+{RecipientAccount}
+{TransactionID}
+{Date}
+{Time}
+{Reason}
+
+1. ACCOUNT LOGIN
+
+SMS: Hello {ClientName}. You have successfully logged in to account {AccountNumber}.
+
+SMS: Security alert: An unsuccessful login attempt was detected for account {AccountNumber}.
+
+SMS: Your account {AccountNumber} has been temporarily blocked after multiple unsuccessful login attempts.
+
+2. ADDING MONEY / DEPOSITING FUNDS
+
+SMS: {ClientName}, funds were successfully added to account {AccountNumber}. Amount: {Amount}. Current balance: {Balance}.
+
+SMS: Your deposit operation was completed successfully. Account: {AccountNumber}. Deposited amount: {DepositAmount}. Current balance: {Balance}.
+
+SMS: The funds could not be added to account {AccountNumber}. Reason: {Reason}.
+
+SMS: Your deposit request is being processed. Account: {AccountNumber}. Amount: {Amount}.
+
+3. WITHDRAWAL / EXTRACTING MONEY
+
+SMS: {ClientName}, your withdrawal was successful. Amount withdrawn: {Amount}. Remaining balance: {Balance}.
+
+SMS: Cash withdrawal completed for account {AccountNumber}. Amount: {Amount}. Current balance: {Balance}.
+
+SMS: The withdrawal operation was declined. Account: {AccountNumber}. Reason: {Reason}.
+
+SMS: Withdrawal could not be completed because of insufficient funds. Current balance: {Balance}.
+
+4. TRANSFERS
+
+SMS: Transfer completed successfully. Amount: {Amount}. Recipient account: {RecipientAccount}. Remaining balance: {Balance}.
+
+SMS: You have received a transfer of {Amount}. Your current balance is {Balance}.
+
+SMS: The transfer from account {AccountNumber} to account {RecipientAccount} was unsuccessful. Reason: {Reason}.
+
+SMS: Transfer request is being processed. Amount: {Amount}. Transaction ID: {TransactionID}.
+
+
+5. CREDIT APPLICATION
+
+
+SMS: Your credit application has been submitted. Requested amount: {CreditSum}. Duration: {DurationMonths} months.
+
+SMS: Credit application for account {AccountNumber} is being reviewed.
+
+SMS: Your credit application has been approved. Approved amount: {CreditSum}. Interest rate: {InterestRate}%.
+
+SMS: Your credit application has been rejected. Reason: {Reason}.
+
+SMS: Your credit application requires additional information. Reason: {Reason}.
+
+
+6. CREDIT PAYMENTS
+
+SMS: Credit payment completed successfully. Amount paid: {Amount}. Remaining balance: {Balance}.
+
+SMS: Your upcoming credit payment is due on {Date}. Payment amount: {Amount}.
+
+SMS: Your credit payment is overdue. Please review your payment details.
+
+SMS: Credit payment could not be processed. Reason: {Reason}.
+
+7. QR PAYMENTS
+
+SMS: QR payment completed successfully. Amount: {Amount}. Remaining balance: {Balance}.
+
+SMS: QR payment was declined. Amount: {Amount}. Reason: {Reason}.
+
+SMS: A QR payment request is waiting for confirmation. Amount: {Amount}.
+
+SMS: QR payment received successfully. Amount: {Amount}. Current balance: {Balance}.
+
+8. ACCOUNT OPERATIONS
+
+SMS: Your account information has been updated successfully.
+
+SMS: Your account {AccountNumber} has been activated.
+
+SMS: Your account {AccountNumber} has been terminated.
+
+SMS: Your social banking account has been opened successfully. Username: {ClientName}.
+
+SMS: Your social banking account information has been updated.
+
+9. SECURITY NOTIFICATIONS
+
+SMS: A new operation was detected on account {AccountNumber}. Amount: {Amount}. Date: {Date}. Time: {Time}.
+
+SMS: A suspicious operation was detected. Please verify the activity on your account.
+
+SMS: Your password has been changed successfully.
+
+SMS: Your password could not be changed. Reason: {Reason}.
+
+10. GENERAL OPERATION RESULTS
+SMS: Operation completed successfully. Account: {AccountNumber}. Current balance: {Balance}.
+
+SMS: Operation failed. Account: {AccountNumber}. Reason: {Reason}.
+
+SMS: Your request is being processed. Transaction ID: {TransactionID}.
+
+SMS: No operation was performed because the request was cancelled.
+
+
+
