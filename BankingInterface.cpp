@@ -22,6 +22,9 @@ public:
     int SocialAccount;
     string SocialUserName;
     int SocialBalance;
+    bool CreditApplicationStatus;
+    int CreditSum;
+    string CreditPeriod;
 
 
     // Assignment operator
@@ -41,6 +44,9 @@ public:
         SocialAccount = Other.SocialAccount;
         SocialUserName = Other.SocialUserName;
         SocialBalance = Other.SocialBalance;
+        CreditApplicationStatus = Other.CreditApplicationStatus;
+        CreditSum = Other.CreditSum;
+        CreditPeriod = Other.CreditPeriod;
 
         return *this;
     }
@@ -153,6 +159,9 @@ int main()
     Client1.QRSymbols = to_string(code);
     Client1.SocialAccount = 8000;
     Client1.SocialUserName = &Client1.ClientName;
+    Client1.CreditApplicationStatus = false;
+    Client1.CreditAmount = 0;
+    Credit1.CreditPeriod = "0/0/0";
 
 
     Testing.push_back(Client1);
