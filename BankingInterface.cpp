@@ -2,6 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
+#include "CreditManagementprofile.h"
+
 using namespace std;
 
 class IdentificationSystem
@@ -22,9 +25,13 @@ public:
     int SocialAccount;
     string SocialUserName;
     int SocialBalance;
-    bool CreditApplicationStatus;
-    int CreditSum;
-    string CreditPeriod;
+    bool Application;
+    int SumofCredit;
+    int PercentOfYear;
+    string ApplicationDate;
+    string EndingDate;
+    bool ApprovedStatus;
+    int DurationMonths;
 
 
     // Assignment operator
@@ -44,9 +51,13 @@ public:
         SocialAccount = Other.SocialAccount;
         SocialUserName = Other.SocialUserName;
         SocialBalance = Other.SocialBalance;
-        CreditApplicationStatus = Other.CreditApplicationStatus;
-        CreditSum = Other.CreditSum;
-        CreditPeriod = Other.CreditPeriod;
+        Application = Other.Application;
+        SumofCredit = Other.SumofCredit;
+        PercentOfYear = Other.PercentOfYear;
+        ApplicationDate = Other.ApplicationDate;
+        EndingDate = Other.EndingDate;
+        ApprovedStatus = Other.ApprovedStatus;
+        DurationMonths = Other.DurationMonths;
 
         return *this;
     }
@@ -128,6 +139,16 @@ void GenerateQRCode()
     long long code = 4448889993211LL;
 
     return to_string(code);
+}
+
+int SumofCredit() {
+
+    if (Application == true & ApprovedStatus == true)
+    {
+        return SumofCredit;
+
+    }
+
 }
 
 // --------------------------------------------------
@@ -221,7 +242,7 @@ int main()
 
     // Implementation of menu services section
 
-    string Services[8] =
+    string Services[10] =
     {
         "Add in",
         "Money out",
@@ -230,7 +251,9 @@ int main()
         "Display Your Accounts",
         "Terminate Account",
         "QR Code Generation",
-        "Social Account Personal"
+        "Social Account Personal",
+        "Credit Info",
+        "Pay Credit"
     };
 
 
@@ -238,6 +261,7 @@ int main()
     int Amount;
     int Deposit_Amount;
     int Social_Amount;
+    int RemainingCreditSum;
     
 
 
@@ -255,7 +279,7 @@ int main()
     cout << "Please choose a service:" << endl;
 
 
-    for (int k = 0; k < 8; k++)
+    for (int k = 0; k < 10; k++)
     {
         cout << k + 1 << ". "
              << Services[k]
@@ -273,7 +297,7 @@ int main()
 while (true) {
 
 
-    if (ClientChoice >= 1 && ClientChoice <= 7)
+    if (ClientChoice >= 1 && ClientChoice <= 10)
     {
         cout << "Selected service: "
              << Services[ClientChoice - 1]
@@ -282,7 +306,7 @@ while (true) {
     else
     {
         cout << "The service is invalid. "
-             << "Please choose 1 - 7."
+             << "Please choose 1 - 10."
              << endl;
 
         return 0;
@@ -436,6 +460,24 @@ while (true) {
     case 8:
         CurrentAccount->SocialAccount = GetSocialAccount();
         cout << "The SocialAccountInfo << Account.SocialBalance << endl;
+
+    case 9:
+        CurrentAccount->CreditSystem = DisplayCreditInformation();
+        cout << "_____YOUR CREDIT INFORMATION INFO____" << endl << Account.CreditSystem() << endl;
+
+    case 10:
+        if (CurrentAccount->Balance >= 0 || CurrentAccount->Balance <= 0) {
+
+            cin >> Balance;
+
+            int RemainingSum = CurrentAccount->SumofCredit - Balance;
+
+            cout << "You just pay -> " << Account.Balance << endl;
+
+            cout << "The sum remaining for closing credit" << RemainingSum << endl;
+
+
+        }
         
 
         
