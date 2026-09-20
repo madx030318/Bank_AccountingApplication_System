@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include "CreditManagementprofile.h"
+#include "BankingNotification.h"
 
 using namespace std;
 
@@ -25,13 +26,8 @@ public:
     int SocialAccount;
     string SocialUserName;
     int SocialBalance;
-    bool Application;
-    int SumofCredit;
-    int PercentOfYear;
-    string ApplicationDate;
-    string EndingDate;
-    bool ApprovedStatus;
-    int DurationMonths;
+    CreditManagementprofile CreditSystem;
+    
 
 
     // Assignment operator
@@ -58,6 +54,7 @@ public:
         EndingDate = Other.EndingDate;
         ApprovedStatus = Other.ApprovedStatus;
         DurationMonths = Other.DurationMonths;
+        CreditSystem = Other.CreditSystem;
 
         return *this;
     }
@@ -141,7 +138,7 @@ void GenerateQRCode()
     return to_string(code);
 }
 
-int SumofCredit() {
+int CreditManagementProfile::GetCreditSum() const {
 
     if (Application == true & ApprovedStatus == true)
     {
@@ -149,18 +146,14 @@ int SumofCredit() {
 
     }
 
+    return 0;
+
 }
 
-// --------------------------------------------------
-// MAIN
-// --------------------------------------------------
 
 int main()
 {
-    // --------------------------------------------------
-    // TEST ACCOUNT
-    // --------------------------------------------------
-
+    // - The account which is used for testing phase by naming Tyler. Also for automation purposes i am implentating the banking notification functions;
 
 
     vector<IdentificationSystem> Testing;
@@ -180,9 +173,7 @@ int main()
     Client1.QRSymbols = to_string(code);
     Client1.SocialAccount = 8000;
     Client1.SocialUserName = &Client1.ClientName;
-    Client1.CreditApplicationStatus = false;
-    Client1.CreditAmount = 0;
-    Credit1.CreditPeriod = "0/0/0";
+    Client1.CreditManagementprofile;
 
 
     Testing.push_back(Client1);
@@ -460,24 +451,42 @@ while (true) {
     case 8:
         CurrentAccount->SocialAccount = GetSocialAccount();
         cout << "The SocialAccountInfo << Account.SocialBalance << endl;
+        break
 
     case 9:
-        CurrentAccount->CreditSystem = DisplayCreditInformation();
-        cout << "_____YOUR CREDIT INFORMATION INFO____" << endl << Account.CreditSystem() << endl;
+        cout << "Your Credit Information" << endl;
+        CurrentAccount->CreditSystem.DisplayCreditInformation();
+        break;
 
     case 10:
-        if (CurrentAccount->Balance >= 0 || CurrentAccount->Balance <= 0) {
 
-            cin >> Balance;
+        int Balance;
 
-            int RemainingSum = CurrentAccount->SumofCredit - Balance;
+        cout << "Enter the amount you want to pay: ";
+        cin >> Balance;
 
-            cout << "You just pay -> " << Account.Balance << endl;
-
-            cout << "The sum remaining for closing credit" << RemainingSum << endl;
-
+        if (Balance <= 0)
+        {
+             cout << "Invalid payment amount." << endl;
+             break;
 
         }
+
+        int RemainingSum =
+        CurrentAccount->CreditSystem.SumofCredit - Balance;
+
+        if (RemainingSum < 0)
+        {
+        cout << "Payment exceeds the remaining credit." << endl;
+        break;
+        }
+
+        CurrentAccount->CreditSystem.SumofCredit = RemainingSum;
+        cout << "You just paid: " << Balance << endl;
+        cout << "Remaining credit: " << CurrentAccount->CreditSystem.SumofCredit << endl;
+
+        break;
+
         
 
         
