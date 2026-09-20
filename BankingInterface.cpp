@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include "CreditManagementprofile.h"
-#include "BankingNotification.h"
+#include "BankingNotificationWorkflow.h"
 
 using namespace std;
 
@@ -149,6 +149,8 @@ int CreditManagementProfile::GetCreditSum() const {
     return 0;
 
 }
+
+
 
 
 int main()
@@ -486,6 +488,10 @@ while (true) {
         cout << "Remaining credit: " << CurrentAccount->CreditSystem.SumofCredit << endl;
 
         break;
+
+        ShowNotification( "Credit payment completed. Account: " + to_string(CurrentAccount->AccountNumber) + ". Amount paid: " + to_string(Balance) + 
+        ". Remaining credit: " + to_string(CurrentAccount->CreditSystem.SumofCredit)
+);
 
         
 
