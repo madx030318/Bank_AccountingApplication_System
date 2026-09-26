@@ -150,6 +150,35 @@ int CreditManagementProfile::GetCreditSum() const {
 
 }
 
+bool CreditManagementProfile::MakeCreditPayment(int PaymentAmount) {
+
+    int RemainingSum;
+
+    if (Application == true && ApprovedStatus == true) {
+
+        if (SumofCredit > 0 || PaymentAmount > 0) {
+
+            if (PaymentAmount <= SumofCredit) {
+                int RemainingSum = SumofCredit - PaymentAmount;
+
+                SumofCredit = RemainingSum;
+                cout << "The credit payment was completed." << endl;
+
+                cout << "Your remaining credit: " << RemainingSum << endl;
+
+                return true;
+
+            }
+
+        }
+
+    }
+
+    return false;
+    
+
+}
+
 
 
 
@@ -349,7 +378,11 @@ while (true) {
              << CurrentAccount->Balance
              << endl;
 
+        ShowNotification(" Withdrawal completed. The Account -> " + to_string(CurrentAccount->AccountName) + " .Amount -> " + to_string(Withdrawal_Amount) + " .CurrentBalance: " + to_string(CurrentAccount->Balance))
+
         break;
+
+    
 
 
     case 3:
@@ -369,6 +402,8 @@ while (true) {
              << CurrentAccount->Deposit_Balance
              << endl;
 
+        ShowNotification("Deposit completed. Account: " + to_string(CurrentAccount->AccountNumber) + ". Amount: " + to_string(DepositAmount) + ". Current balance: " + to_string(CurrentAccount->Balance))
+
         break;
 
 
@@ -377,7 +412,6 @@ while (true) {
         cout << "Please enter the account number to transfer money to: ";
 
         int TransferAccount;
-
         cin >> TransferAccount;
 
 
@@ -385,7 +419,11 @@ while (true) {
              << TransferAccount
              << endl;
 
+        ShowNofitication("Transfer completed. Sender account: " + to_string(CurrentAccount->AccountNumber) + " . Recipient account :  " + to_string(TransferAccount) + " .Amount : " + to_string(CurrentAccount->TransferAmount))
+
         break;
+
+    
 
 
     case 5:
@@ -461,36 +499,33 @@ while (true) {
         break;
 
     case 10:
+        int PaymentAmount;
 
-        int Balance;
+        cout << "Enter the credit payment amount: "; 
+        cin >> PaymentAmount;
 
-        cout << "Enter the amount you want to pay: ";
-        cin >> Balance;
-
-        if (Balance <= 0)
-        {
-             cout << "Invalid payment amount." << endl;
-             break;
-
+        if (PaymentAmount <= 0) 
+        { cout << "Invalid payment amount." << endl;
+         break; 
         }
 
-        int RemainingSum =
-        CurrentAccount->CreditSystem.SumofCredit - Balance;
-
-        if (RemainingSum < 0)
-        {
-        cout << "Payment exceeds the remaining credit." << endl;
-        break;
+        int RemainingCredit = CurrentAccount->CreditSystem.SumofCredit - PaymentAmount; 
+        if (RemainingCredit < 0) { 
+            cout << "Payment exceeds the remaining credit debt sum." << endl; 
+            break; 
         }
 
-        CurrentAccount->CreditSystem.SumofCredit = RemainingSum;
-        cout << "You just paid: " << Balance << endl;
+        CurrentAccount->CreditSystem.SumofCredit = RemainingCredit; 
+        cout << "Payment completed: " << PaymentAmount << endl; 
         cout << "Remaining credit: " << CurrentAccount->CreditSystem.SumofCredit << endl;
 
+        ShowNotification( "Credit payment completed. Account: " + to_string(CurrentAccount->AccountNumber) + 
+            ". Payment amount: " + to_string(PaymentAmount) + ". Remaining credit: " + 
+            to_string(CurrentAccount->CreditSystem.SumofCredit) );
+
         break;
 
-        ShowNotification( "Credit payment completed. Account: " + to_string(CurrentAccount->AccountNumber) + ". Amount paid: " + to_string(Balance) + 
-        ". Remaining credit: " + to_string(CurrentAccount->CreditSystem.SumofCredit)
+        
 );
 
         
