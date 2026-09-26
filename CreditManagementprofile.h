@@ -36,6 +36,7 @@ void AnalyzeEndingDate();
 void DisplayCreditInformation();
 int FindClient();
 bool IsApproved();
+bool MakeCreditPayment(int PaymentAmount);
 }
 
 #endif
