@@ -60,3 +60,104 @@ bool Found = false;
 
     return Found;
 }
+
+
+bool BankingGUI::ValidateLoginInput() {
+    if (AccountNumber <= 0) {
+
+        cout << "Your Account is incorrect. Try Again ! " << endl;
+        return false;
+
+    }
+
+    if (ClientName.empty()) {
+        cout << "Client name cannot be empty." << endl;
+        return false;
+    }
+
+    if (SocialAccount && SocialUserName.empty())
+    {
+        cout << "Social username is required." << endl;
+        return false;
+    }
+
+    return true
+}
+
+void BankingGUI::ProcessLogin() {
+    if (!ValidateLoginInput())
+    {
+        return;
+    }
+
+    if (FindAccount())
+    {
+        LoggedIn = true;
+
+        cout << "Account was found." << endl;
+    }
+    else
+    {
+        LoggedIn = false;
+
+        cout << "Account was not found." << endl;
+    }
+}
+
+}
+
+void BankingGUI::ShowLoginWindow()
+{
+    ImGui::Begin("Banking System");
+
+    ImGui::Text("Account Login");
+
+    
+    ImGui::Separator();
+
+    ImGui::InputInt(
+        "Account Number",
+        &AccountNumber
+    );
+
+    ImGui::InputText(
+        "Client Name",
+        &ClientName
+    );
+
+    ImGui::Checkbox(
+        "Social Account",
+        &SocialAccount
+    );
+
+    if (SocialAccount)
+    {
+        ImGui::InputText(
+            "Social Username",
+            &SocialUserName
+        );
+    }
+
+    if (ImGui::Button("Login"))
+    {
+        ProcessLogin();
+    }
+
+    ImGui::End();
+}
+
+void BankingGUI::Run()
+{
+    while (!WindowShouldClose)
+    {
+        if (!LoggedIn)
+        {
+            ShowLoginWindow();
+        }
+        else
+        {
+            ShowBankingWindow();
+        }
+
+    }
+}
