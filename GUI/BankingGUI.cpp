@@ -51,14 +51,19 @@ bool Found = false;
             FileSocialAccount == InputSocialAccount &&
             FileSocialUserName == SocialUserName)
             {
-            Found = true;
-            break;
+                CurrentAccount = new IdentificationSystem();
+                CurrentAccount->AccountNumber = AccountNumber;
+                CurrentAccount->ClientName = ClientName;
+                CurrentAccount->SocialAccount = SocialAccount;
+
+                File.close();
+
+                return Found;
+            
         }
     }
 
-    File.close();
-
-    return Found;
+    
 }
 
 
@@ -84,7 +89,9 @@ bool BankingGUI::ValidateLoginInput() {
     return true
 }
 
-void BankingGUI::ProcessLogin() {
+
+void BankingGUI::ProcessLogin()
+{
     if (!ValidateLoginInput())
     {
         return;
@@ -95,6 +102,7 @@ void BankingGUI::ProcessLogin() {
         LoggedIn = true;
 
         cout << "Account was found." << endl;
+        cout << "Login successful." << endl;
     }
     else
     {
@@ -102,8 +110,6 @@ void BankingGUI::ProcessLogin() {
 
         cout << "Account was not found." << endl;
     }
-}
-
 }
 
 void BankingGUI::ShowLoginWindow()
@@ -160,4 +166,22 @@ void BankingGUI::Run()
         }
 
     }
+}
+
+void BankingGUI::Logout()
+{
+    if (CurrentAccount != NULL)
+    {
+        delete CurrentAccount;
+        CurrentAccount = NULL;
+    }
+
+    LoggedIn = false;
+
+    AccountNumber = 0;
+    ClientName = "";
+    SocialAccount = false;
+    SocialUserName = "";
+
+    cout << "User logged out." << endl;
 }
