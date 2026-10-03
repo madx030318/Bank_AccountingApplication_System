@@ -17,6 +17,9 @@ private:
 
     IdentificationSystem* CurrentAccount;
 
+    int DepositAmount;
+    bool ShowDepositWindow;
+
 public:
 
     BankingGUI();
