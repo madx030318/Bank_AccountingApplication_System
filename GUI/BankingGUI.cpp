@@ -17,6 +17,9 @@ BankingGUI::BankingGUI()
     LoggedIn = false;
 
     CurrentAccount = NULL;
+
+    DepositAmount = 0;
+    ShowDepositWindow = false;
 }
 
 bool BankingGUI::FindAccount()
@@ -184,4 +187,65 @@ void BankingGUI::Logout()
     SocialUserName = "";
 
     cout << "User logged out." << endl;
+}
+
+void BankingGUI::ShowBankingWindow()
+{
+    ImGui::Begin("Banking Dashboard");
+
+    if (CurrentAccount == NULL)
+    {
+        ImGui::Text("No account is logged in.");
+        ImGui::End();
+        return;
+    }
+
+    ImGui::Text(
+        "Welcome, %s",
+        CurrentAccount->ClientName.c_str()
+    );
+
+    ImGui::Text(
+        "Account Number: %d",
+        CurrentAccount->AccountNumber
+    );
+
+    ImGui::Text(
+        "Balance: %d",
+        CurrentAccount->Balance
+    );
+
+    ImGui::Separator();
+
+    if (ImGui::Button("Deposit"))
+    {
+        ShowDepositWindow = true;
+    }
+
+    if (ImGui::Button("Withdraw"))
+    {
+    }
+
+    if (ImGui::Button("Transfer"))
+    {
+    }
+
+    if (ImGui::Button("Credit"))
+    {
+    }
+
+    if (ImGui::Button("QR Payment"))
+    {
+    }
+
+    if (ImGui::Button("Notifications"))
+    {
+    }
+
+    if (ShowDepositWindow)
+    {
+        ShowDeposit();
+    }
+
+    ImGui::End();
 }
